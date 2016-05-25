@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Module: cellEditors</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-behaviors_default.html">behaviors\default</a></li><li><a href="module-behaviors_gol.html">behaviors\gol</a></li><li><a href="module-behaviors_in-memory.html">behaviors\in-memory</a></li><li><a href="module-behaviors_q.html">behaviors\q</a></li><li><a href="module-behaviors_qtree.html">behaviors\qtree</a></li><li><a href="module-behaviors_web-worker.html">behaviors\web-worker</a></li><li><a href="module-cellEditors.html">cellEditors</a></li><li><a href="module-defaults.html">defaults</a></li><li><a href="module-localization.html">localization</a></li></ul><h3>Classes</h3><ul><li><a href="Behavior.html">Behavior</a></li><li><a href="behaviors.JSON.html">JSON</a></li><li><a href="behaviors.Local.html">Local</a></li><li><a href="CellClick.html">CellClick</a></li><li><a href="CellEditing.html">CellEditing</a></li><li><a href="CellEditor.html">CellEditor</a></li><li><a href="CellProvider.html">CellProvider</a></li><li><a href="CellSelection.html">CellSelection</a></li><li><a href="Color.html">Color</a></li><li><a href="Column.html">Column</a></li><li><a href="ColumnAutosizing.html">ColumnAutosizing</a></li><li><a href="ColumnMoving.html">ColumnMoving</a></li><li><a href="ColumnPicker.html">ColumnPicker</a></li><li><a href="ColumnResizing.html">ColumnResizing</a></li><li><a href="ColumnSchemaFactory.html">ColumnSchemaFactory</a></li><li><a href="ColumnSelection.html">ColumnSelection</a></li><li><a href="ColumnSorting.html">ColumnSorting</a></li><li><a href="Combo.html">Combo</a></li><li><a href="ComboBox.html">ComboBox</a></li><li><a href="ConditionalsCql.html">ConditionalsCql</a></li><li><a href="DataModel.html">DataModel</a></li><li><a href="dataModels.JSON.html">JSON</a></li><li><a href="Date.html">Date</a></li><li><a href="Default.html">Default</a></li><li><a href="DefaultFilter.html">DefaultFilter</a></li><li><a href="Dialog.html">Dialog</a></li><li><a href="Feature.html">Feature</a></li><li><a href="FilterBox.html">FilterBox</a></li><li><a href="Filters.html">Filters</a></li><li><a href="Hypergrid.html">Hypergrid</a></li><li><a href="InMemory.html">InMemory</a></li><li><a href="KeyPaging.html">KeyPaging</a></li><li><a href="ManageFilters.html">ManageFilters</a></li><li><a href="module-localization-DateFormatter.html">DateFormatter</a></li><li><a href="module-localization-NumberFormatter.html">NumberFormatter</a></li><li><a href="Null.html">Null</a></li><li><a href="Number.html">Number</a></li><li><a href="OnHover.html">OnHover</a></li><li><a href="ParserCQL.html">ParserCQL</a></li><li><a href="Renderer.html">Renderer</a></li><li><a href="RowResizing.html">RowResizing</a></li><li><a href="RowSelection.html">RowSelection</a></li><li><a href="SelectionModel.html">SelectionModel</a></li><li><a href="Slider.html">Slider</a></li><li><a href="Spinner.html">Spinner</a></li><li><a href="Textfield.html">Textfield</a></li><li><a href="ThumbwheelScrolling.html">ThumbwheelScrolling</a></li></ul><h3>Interfaces</h3><ul><li><a href="localizerInterface.html">localizerInterface</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addDeepProperties">addDeepProperties</a></li><li><a href="global.html#append">append</a></li><li><a href="global.html#clearAllCellProperties">clearAllCellProperties</a></li><li><a href="global.html#close">close</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#copyAll">copyAll</a></li><li><a href="global.html#deprecated">deprecated</a></li><li><a href="global.html#getBehavior">getBehavior</a></li><li><a href="global.html#getCellEditorAt">getCellEditorAt</a></li><li><a href="global.html#getColumnFilter">getColumnFilter</a></li><li><a href="global.html#getGrid">getGrid</a></li><li><a href="global.html#hideEditor">hideEditor</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="global.html#modes">modes</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#open">open</a></li><li><a href="global.html#renderCellError">renderCellError</a></li><li><a href="global.html#saveFolder">saveFolder</a></li><li><a href="global.html#saveFolders">saveFolders</a></li><li><a href="global.html#setColumnFilterState">setColumnFilterState</a></li></ul>
+</nav>
+<div id="main">
+
+    <h1 class="page-title">Module: cellEditors</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~constructors"><span class="type-signature">(inner) </span>constructors<span class="type-signature"> :object</span></h4>
+
+
+<p class="summary"><p>Hash of cell editor object constructors.</p></p>
+
+
+
+<div class="description">
+    <p>This hash's only purpose is to support the convenience methods defined herein: <code>extend</code>, <code>register</code>, and <code>instantiate</code>. If you do not need these methods' functionality, you do not need to register your cell editors.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".extend"><span class="type-signature">(static) </span>extend<span class="signature">(localizerName, baseClassName<span class="signature-attributes">opt</span>, newClassName<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {function}</span></h4>
+
+    
+    <p class="summary"><p>Create a new localized cell editor class.</p></p>
+    
+
+
+
+<div class="description">
+    <p>Extend the provided cell editor ('baseClassName') using the named localizer (<code>localizerName</code>), naming it after the localizer unless otherwise specified (in <code>newClassName</code>)</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>localizerName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>baseClassName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    'textfield'
+                
+                </td>
+            
+
+            <td class="description last"><p>The base class must have been previously registered.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>newClassName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    localizerName
+                
+                </td>
+            
+
+            <td class="description last"><p>Provide a value here to name the cell editor differently from its localizer.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The new cell editor constructor.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".instantiate"><span class="type-signature">(static) </span>instantiate<span class="signature">(editorName)</span><span class="type-signature"> &rarr; {<a href="CellEditor.html">CellEditor</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Must be called with YOUR Hypergrid object as context!</p>
+</div>
+
+
+
+
+
+
+
+    <h5>This:</h5>
+    <ul><li>{<a href="Hypergrid.html">Hypergrid</a>}</li></ul>
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>editorName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>New instance of the named cell editor.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="CellEditor.html">CellEditor</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".register"><span class="type-signature">(static) </span>register<span class="signature">(Constructor, editorName<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary"><p>Register a cell editor (class) or a synonym of an already-registered cell editor.</p></p>
+    
+
+
+
+<div class="description">
+    <p>Adds a custom cell editor to the <code>constructors</code> hash using the provided name (or the class name), converted to all lower case.</p>
+<p>To register a syonym for an already-registered cell editor, use the following construct:</p>
+<pre class="prettyprint source"><code>var cellEditors = require('./cellEditors');
+cellEditors.register(cellEditors.get('spinner'), 'elevator');</code></pre><p>This makes a synonym &quot;elevator&quot; for the &quot;spinner&quot; cell editor.</p>
+<blockquote>
+<p>All native cell editors are &quot;preregistered&quot; in cellEditors/index.js.</p>
+</blockquote>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Constructor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">YourCellEditor.prototype.constructor</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A constructor, typically extended from <code>CellEditor</code> (or a descendant therefrom).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>editorName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Case-insensitive editor key. If not given, <code>YourCellEditor.prototype.$$CLASS_NAME</code> is used.</p>
+<blockquote>
+<p>Note: <code>$$CLASS_NAME</code> can be easily set up by providing a string as the (optional) first parameter in your <a href="https://www.npmjs.com/package/extend-me">CellEditor.extend</a> call. (Formal parameter name: <code>alias</code>.)</p>
+</blockquote></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~get"><span class="type-signature">(inner) </span>get<span class="signature">(editorName)</span><span class="type-signature"> &rarr; {*}</span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>editorName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">*</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    © 2016 <a href="http://www.openfin.co" target="_blank">OpenFin</a> All Rights Reserved.
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
